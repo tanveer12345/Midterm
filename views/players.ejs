@@ -1,0 +1,59 @@
+<% include partials/header %>
+
+    <style scoped>
+        h1,
+        p {
+            text-align: center;
+        }
+
+        table {
+            margin: 10px auto;
+        }
+    </style>
+
+    <h1>
+        <%= title %>
+    </h1>
+
+   
+
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Team</th>
+                <th>Jersey</th>
+                <th>URL</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            <% for (let i = 0; i < playerTable.length; i++) { %>
+
+                <tr>
+                    <td>
+                        <%= playerTable[i].FirstName %>
+                    </td>
+                    <td>
+                        <%= playerTable[i].LastName %>
+                    </td>
+                    <td>
+                        <%= playerTable[i].Team %>
+                    </td>
+                    <td>
+                        <%= playerTable[i].Jersey %>
+                    </td>
+                    <td>
+                        <%= playerTable[i].URL %>
+                    </td>
+                </tr>
+
+                <% } %>
+        </tbody>
+    </table>
+
+   
+      
+            <% include partials/footer %>
